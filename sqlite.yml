@@ -1,0 +1,35 @@
+- name: Sqlite
+  hosts: all
+  become: yes
+  become_method: sudo
+
+  vars_files:
+    - vars/main.yml
+  
+  vars_prompt:
+    - name: 'sqlite_selection'
+      prompt: "Choose the Sqlite distribution \n
+      1: sqlite 3.9\n
+      2: sqlite 3.30\n
+      3: sqlite 3.35\n"
+      private: no
+      default: 3
+
+  vars:
+    sqlite_select:
+      '1': "3.9"
+      '2': "3.30"
+      '2': "3.35"
+
+    sqlite_distribution: "{{sqlite_select[sqlite_selection]}}"
+  
+  pre_tasks:
+    - debug:
+        msg: Will install {{sqlite_distribution}}
+
+  roles:
+    - {role: role_common, tags: "role_common"}  
+    - {role: role_cloud, tags: "role_cloud"}   
+    - {role: role_sqlite, tags: "role_sqlite"}
+    - {role: role_preend, tags: "role_preend"}
+    - {role: role_end, tags: "role_end"}
