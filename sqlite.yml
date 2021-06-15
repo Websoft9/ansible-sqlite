@@ -21,11 +21,11 @@
       '2': "3.30"
       '2': "3.35"
 
-    sqlite_distribution: "{{sqlite_select[sqlite_selection]}}"
+    sqlite_version: "{{sqlite_select[sqlite_selection]}}"
   
   pre_tasks:
     - debug:
-        msg: Will install {{sqlite_distribution}}
+        msg: Will install {{sqlite_version}}
 
   roles:
     - {role: role_common, tags: "role_common"}  
