@@ -1,36 +1,41 @@
-# 初始化安装
+# 初始化验证
 
-在云服务器上部署 RabbitMQ 预装包之后，请参考下面的步骤快速入门。
+在云服务器上部署 SQLite 预装包之后，请参考下面的步骤快速入门。
 
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:15672** 端口是否开启
-3. 若想用域名访问 RabbitMQ，请先到 **域名控制台** 完成一个域名解析
+2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:9090** 端口是否开启
+3. 若想用域名访问 SQLite，请先到 **域名控制台** 完成一个域名解析
 
-## RabbitMQ 安装向导
+## SQLite 初始化验证
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名:15672* 或 *http://服务器公网IP:15672*, 进入初始化页面
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-login-websoft9.png)
+1. 使用 SSH 工具，连接到服务器
 
-2. 输入账号密码（[不知道账号密码？](/zh/stack-accounts.md#rabbitmq)），成功登录到 RabbitMQ 后台  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-bk-websoft9.png)
+2. 运行 `sqlite3` 命令，显然类型下面的结果，即表明运行正常
+   ```
+   [root@VM-0-11-centos ~]# sqlite3
+   SQLite version 3.29.0 2019-07-10 17:32:03
+   Enter ".help" for usage hints.
+   Connected to a transient in-memory database.
+   Use ".open FILENAME" to reopen on a persistent database.
+   sqlite>
+   ```
 
-3. 登录后通过：【Users】>【Admin】>【Permissions】>【Update this user】设置新密码  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/rabbitmq/rabbitmq-pw-websoft9.png)
+3. 验证 [SQLite 可视化](/zh/solution-gui.md)管理工具
 
-> 需要了解更多 RabbitMQ 的使用，请参考官方文档：[RabbitMQ Documentation](https://www.rabbitmq.com/documentation.html)
+> 需要了解更多 SQLite 的使用，请参考官方文档：[SQLite Documentation](https://www.sqlite.com/documentation.html)
 
-## RabbitMQ 入门向导
+## SQLite 入门向导
 
-现在开始针对于如何使用 RabbitMQ 传输数据，进行完整的说明：
+现在开始针对于如何使用 SQLite 创建和管理数据库，进行完整的说明：
 
 ## 常见问题
 
-#### 浏览器打开IP地址，无法访问 RabbitMQ（白屏没有结果）？
+#### 浏览器打开IP地址，无法访问 SQLite（白屏没有结果）？
 
-您的服务器对应的安全组15672端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+您的服务器对应的安全组 9090 端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
 
-#### RabbitMQ 服务启动失败？
+#### SQLite 有系统服务吗？
 
-暂无
+没有

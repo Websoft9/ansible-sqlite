@@ -1,19 +1,19 @@
 # FAQ
 
-#### How can I enable the debug mode of RabbitMQ service?
+#### How can I enable the debug mode of SQLite service?
 
 ```
-systemctl stop rabbitmq-server
-rabbitmq-server console
+systemctl stop sqlite-server
+sqlite-server console
 ```
 
-#### Can I reset password of RabbitMQ by command?
+#### Can I reset password of SQLite by command?
 
-Yes, e.g `rabbitmqctl change_password  admin newpassword`
+Yes, e.g `sqlitectl change_password  admin newpassword`
 
-#### If there is no domain name, can I deploy RabbitMQ?
+#### If there is no domain name, can I deploy SQLite?
 
-Yes, access RabbitMQ by *http://Server's Internet IP:8161*.
+Yes, access SQLite by *http://Server's Internet IP:8161*.
 
 #### What is the password for the database root user?
 
@@ -23,7 +23,7 @@ The password is stored in the server related file `/credentials/password.txt`.
 
 Yes, phpMyAdmin is included. Visit by *http://Server's Internet IP:9090*.
 
-#### Is it possible to modify the source path of RabbitMQ?
+#### Is it possible to modify the source path of SQLite?
 
 No.
 

@@ -1,17 +1,17 @@
 # 服务启停
 
-使用由Websoft9提供的 RabbitMQ 部署方案，可能需要用到的服务如下：
+使用由Websoft9提供的 SQLite 部署方案，可能需要用到的服务如下：
 
-### RabbitMQ
+### SQLite
 
 ```shell
-sudo systemctl start rabbitmq-server
-sudo systemctl stop rabbitmq-server
-sudo systemctl restart rabbitmq-server
-sudo systemctl status rabbitmq-server
+sudo systemctl start sqlite-server
+sudo systemctl stop sqlite-server
+sudo systemctl restart sqlite-server
+sudo systemctl status sqlite-server
 
-# you can use this debug mode if RabbitMQ service can't run
-rabbitmq-server console
+# you can use this debug mode if SQLite service can't run
+sqlite-server console
 ```
 
 ### MySQL

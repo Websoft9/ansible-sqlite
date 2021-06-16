@@ -6,11 +6,11 @@
 - 操作系统打个补丁常称之为**更新**，Ubuntu16.04 变更为 Ubuntu18.04，称之为**升级**
 - MySQL5.6.25-->MySQL5.6.30 常称之为**更新**，MySQL5.6->MySQL5.7 称之为**升级**
 
-RabbitMQ 完整的更新升级包括：系统级更新（操作系统和运行环境）和 RabbitMQ 程序升级两种类型
+SQLite 完整的更新升级包括：系统级更新（操作系统和运行环境）和 SQLite 程序升级两种类型
 
 ## 系统级更新
 
-运行一条更新命令，即可完成系统级（包含RabbitMQ小版本更新）更新：
+运行一条更新命令，即可完成系统级（包含SQLite小版本更新）更新：
 
 ``` shell
 #For Ubuntu&Debian
@@ -22,23 +22,29 @@ yum update -y --skip-broken
 > 本部署包已预配置一个用于自动更新的计划任务。如果希望去掉自动更新，请删除对应的Cron
 
 
-## RabbitMQ 升级
+## SQLite 升级
 
-RabbitMQ 基于 Docker 部署，其升级流程：拉取镜像 > 删除容器 > 重建容器
+如果系统仓库中的 SQLite 版本比较低，又想升级到指定的版本，可以参考如下教程： 
 
 > 升级之前请确保您已经完成了服务器的镜像（快照）备份
 
-1. 登录服务器，编辑 */data/wwwroot/rabbitmq/.env* 文件，将版本变量的值修改为目标版本号
+1. 找到所需 SQLite 目标版本的[下载地址](https://www.sqlite.org/chronology.html)
 
-2. 拉取目标版本的镜像
+2. 分别运行如下的升级命令
    ```
-   cd /data/wwwroot/rabbitmq
-   docker-compose pull
-   ```
-   > 如果显示没有镜像可拉取，则无需升级
+   # 下载 SQLite 源码（自行替换）
+   wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz
 
-3. 删除旧容器，重新创建 RabbitMQ 容器
-    ```
-    docker-compose down -v
-    docker-compose up -d
-    ```
+   # 编译
+   tar zxvf sqlite-autoconf-3290000.tar.gz 
+   cd sqlite-autoconf-3290000/
+   ./configure --prefix=/usr/local
+   make && make install
+   
+   # 替换旧版本
+   mv /usr/bin/sqlite3  /usr/bin/sqlite3_old
+   ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3
+   echo "/usr/local/lib" > /etc/ld.so.conf.d/sqlite3.conf
+   ldconfig
+   sqlite3 -version
+   ```
