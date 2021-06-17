@@ -12,25 +12,13 @@
 
 可以，`sqlitectl change_password  admin newpassword`
 
-#### 如果没有域名是否可以部署 SQLite？
-
-可以，访问`http://服务器公网IP` 即可
-
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
-
 #### 是否有可视化的数据库管理工具？
 
-有，内置phpMyAdmin，访问地址：*http://服务器公网IP:9090*
+有，内置 CloudBeaver，访问地址：*http://服务器公网IP:9090*
 
-#### 如何禁止外界访问phpMyAdmin？
+#### 如何才能使用 CloudBeaver 管理 SQLite 数据库？
 
-连接服务器，编辑 [phpMyAdmin 配置文件](/zh/stack-components.md#phpmyadmin)，将其中的 `Require all granted` 更改为 `Require ip 192.160.1.0`，然后重启 Apache 服务
-
-#### 是否可以修改SQLite的源码路径？
-
-不可以
+只要 SQLite 数据库文件存放在 */data/apps/cloudbeaver/volumes* 目录下，CloudBeaver 就可以管理到它们。
 
 #### 如何修改上传的文件权限?
 

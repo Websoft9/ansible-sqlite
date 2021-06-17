@@ -2,52 +2,13 @@
 
 使用由Websoft9提供的 SQLite 部署方案，可能需要用到的服务如下：
 
-### SQLite
+### CloudBeaver
 
 ```shell
-sudo systemctl start sqlite-server
-sudo systemctl stop sqlite-server
-sudo systemctl restart sqlite-server
-sudo systemctl status sqlite-server
-
-# you can use this debug mode if SQLite service can't run
-sqlite-server console
-```
-
-### MySQL
-
-```shell
-sudo systemctl start mysql
-sudo systemctl stop mysql
-sudo systemctl restart mysql
-sudo systemctl status mysql
-```
-
-### MySQL on Docker
-
-```shell
-sudo docker start redmine-mysql
-sudo docker restart redmine-mysql
-sudo docker stop redmine-mysql
-sudo docker stats redmine-mysql
-```
-
-### Redis
-
-```shell
-systemctl start redis
-systemctl stop redis
-systemctl restart redis
-systemctl status redis
-```
-
-### phpMyAdmin
-
-```shell
-sudo docker start phpmyadmin
-sudo docker stop phpmyadmin
-sudo docker restart phpmyadmin
-sudo docker stats pgadmin
+sudo docker start cloudbeaver
+sudo docker stop cloudbeaver
+sudo docker restart cloudbeaver
+sudo docker stats cloudbeaver
 ```
 
 ### Docker
@@ -72,13 +33,4 @@ sudo docker-compose up -d
 sudo docker-compose start
 sudo docker-compose stop
 sudo docker-compose restart
-```
-
-### Nginx
-
-```shell
-sudo systemctl start nginx
-sudo systemctl stop nginx
-sudo systemctl restart nginx
-sudo systemctl status nginx
 ```

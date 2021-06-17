@@ -12,6 +12,7 @@ SQLite 预装包包含 SQLite 运行所需一序列支撑软件（简称为“�
 
 SQLite 可执行程序： */usr/bin/sqlite3*  
 SQLite 日志目录： */data/logs/sqlite*  
+SQLite 数据库文件目录： */data/apps/cloudbeaver/volumes*  
 
 ### Apache
 

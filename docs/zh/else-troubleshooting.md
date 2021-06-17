@@ -25,9 +25,6 @@ systemctl status sqlite
 journalctl -u sqlite
 ```
 
-#### 在Chrome下修改密码后报错？
+#### CloudBeaver 无法连接 SQLite 数据库？
 
-这个并不是服务器端的问题，只要更新浏览器即可。
-
-![chrome error of SQLite](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlite/sqlite-chromeerror-websoft9.png)
-
+确保 SQLite 数据库文件存放在： */data/apps/cloudbeaver/volumes* 目录下，如果不在此目录，CloudBeaver 便无法管理。
