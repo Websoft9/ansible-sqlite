@@ -1,31 +1,20 @@
 # FAQ
 
-#### How can I enable the debug mode of SQLite service?
+#### Does SQLite need username and password?
 
-```
-systemctl stop sqlite-server
-sqlite-server console
-```
+No
 
-#### Can I reset password of SQLite by command?
+#### What is the installation method of SQLite in this project?
 
-Yes, e.g `sqlitectl change_password  admin newpassword`
+Make
 
-#### If there is no domain name, can I deploy SQLite?
+#### How can I use CloudBeaver to manage SQLite databases?
 
-Yes, access SQLite by *http://Server's Internet IP:8161*.
-
-#### What is the password for the database root user?
-
-The password is stored in the server related file `/credentials/password.txt`.
+CloudBeaver just only manage database in the directory: */data/apps/cloudbeaver/volumes*
 
 #### Is there a web-base GUI database management tool?
 
-Yes, phpMyAdmin is included. Visit by *http://Server's Internet IP:9090*.
-
-#### Is it possible to modify the source path of SQLite?
-
-No.
+Yes, CloudBeaver is included. Visit by *http://Server's Internet IP:9090*.
 
 #### How to change the permissions of filesystem?
 

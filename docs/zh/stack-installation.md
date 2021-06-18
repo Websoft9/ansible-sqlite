@@ -24,7 +24,7 @@
 
 3. 验证 [SQLite 可视化](/zh/solution-gui.md)管理工具
 
-> 需要了解更多 SQLite 的使用，请参考官方文档：[SQLite Documentation](https://www.sqlite.com/documentation.html)
+> 需要了解更多 SQLite 的使用，请参考官方文档：[SQLite 教程](https://www.sqlite.net.cn/tutorial/2.html)
 
 ## SQLite 入门向导
 

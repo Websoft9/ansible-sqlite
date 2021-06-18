@@ -8,7 +8,7 @@ This documentation is provided by [Websoft9](https://www.websoft9.com/). It can 
 
 [SQLite](https://sqlite.org) is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world. SQLite is built into all mobile phones and most computers and comes bundled inside countless other applications
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/sqlite/sqlite-gui-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/sqlite/sqlite-gui-websoft9.png)
 
 ---
 

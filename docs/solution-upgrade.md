@@ -26,21 +26,28 @@ sudo yum update -y --skip-broken
 
 ## Upgrade SQLite
 
-This deployment solution is based on Docker and so you can upgrade SQLite by the standard process of Docker:  
+If there no newer rpm/deb package for you SQLite, you should update it as below steps:  
 
 > You should complete an image or snapshot backup for instance before upgrade
 
-1. Use **SFTP** to login Server, modify **APP_VERSION** in the **.env** file of SQLite directory
+1. Access the [Download](https://www.sqlite.org/chronology.html) URL of SQLite
 
-2. Go to the code-server root directory, then pull new images
+2. Run these commands
    ```
-   cd /data/wwwroot/sqlite
-   docker-compose pull
-   ```
-3. Delete old container and recreate new container
-   ```
-   docker-compose down -v
-   docker-compose up -d
-   ```
+   # Download sources of SQLite, the URL below only for your reference
+   wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz
 
-Refer to the official docs: [Upgrading SQLite](https://www.sqlite.com/upgrade.html)
+   # Make it
+   tar zxvf sqlite-autoconf-3290000.tar.gz 
+   cd sqlite-autoconf-3290000/
+   ./configure --prefix=/usr/local
+   make && make install
+   
+   # Replace the old version
+   mv /usr/bin/sqlite3  /usr/bin/sqlite3_old
+   ln -s /usr/local/bin/sqlite3   /usr/bin/sqlite3
+   echo "/usr/local/lib" > /etc/ld.so.conf.d/sqlite3.conf
+   sudo echo "/usr/local/lib" |tee /etc/ld.so.conf.d/sqlite3.conf
+   ldconfig
+   sqlite3 -version
+   ```

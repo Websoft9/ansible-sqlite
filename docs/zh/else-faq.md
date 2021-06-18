@@ -8,17 +8,13 @@
 
 采用编译安装
 
-#### 是否可以通过命令行修改SQLite后台密码？
-
-可以，`sqlitectl change_password  admin newpassword`
-
 #### 是否有可视化的数据库管理工具？
 
 有，内置 CloudBeaver，访问地址：*http://服务器公网IP:9090*
 
 #### 如何才能使用 CloudBeaver 管理 SQLite 数据库？
 
-只要 SQLite 数据库文件存放在 */data/apps/cloudbeaver/volumes* 目录下，CloudBeaver 就可以管理到它们。
+SQLite 数据库文件存放在 */data/apps/cloudbeaver/volumes* 目录下，CloudBeaver 便可管理到它们。
 
 #### 如何修改上传的文件权限?
 

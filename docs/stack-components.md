@@ -9,11 +9,13 @@ This solution use Docker to deploy all service, you can run the command `docker 
 ### SQLite
 
 SQLite bin file:  */usr/bin/sqlite3*  
-SQLite 数据库文件目录： */data/apps/cloudbeaver/volumes*  
+SQLite db file path:  */data/apps/cloudbeaver/volumes*  
+
+> SQLite db file can anywhere, but only */data/apps/cloudbeaver/volumes* can managed by GUI tool
 
 ### CloudBeaver
 
-CloudBeaver 是一款可视化数据库管理工具，在本项目中它基于 Docker 安装。  
+CloudBeaver is a web-based GUI tool for database, it installed by Docker  
 
 CloudBeaver directory：*/data/apps/cloudbeaver*  
 CloudBeaver docker compose file：*/data/apps/cloudbeaver/docker-compose.yml* 

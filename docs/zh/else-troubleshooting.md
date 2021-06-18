@@ -8,9 +8,9 @@
 
 日志文件路径为：`/data/logs`。检索关键词 **Failed** 或者 **error** 查看错误
 
-#### SQLite服务无法启动？
+#### SQLite服务使用？
 
-服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
+服务无法使用最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
 建议先通过命令进行排查  
 
 ```shell
@@ -19,10 +19,6 @@ df -lh
 
 # 查看内存使用
 free -lh
-
-# 查看服务状态和日志
-systemctl status sqlite
-journalctl -u sqlite
 ```
 
 #### CloudBeaver 无法连接 SQLite 数据库？

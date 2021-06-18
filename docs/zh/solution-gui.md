@@ -32,7 +32,7 @@
 完成上述准备工作后，我们开始连接 SQLite 数据库：  
 
 1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **SQLite**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconn-websoft9.png)
 
 2. 参考下面的建议，设置连接信息，然后点击【Save】
 
@@ -40,10 +40,10 @@
    - Connection Name 设置为一个便于识别的名字即可
    - Database 为 SQLite 数据库的路径，例如：/data/apps/cloudbeaver/volumes/sqlite3 testDB.db
 
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
 
 3. 设置信息保存后，使用这个 SQLite 连接，输入数据库的账号和密码
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-conlogin-websoft9.png)
 
 4. 成功连接到 SQLite，发现可以看到之前创建的 Company 表
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-listtable-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-listtable-websoft9.png)
