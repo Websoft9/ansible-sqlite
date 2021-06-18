@@ -38,7 +38,7 @@
 
    - Driver 保持默认的 SQLite
    - Connection Name 设置为一个便于识别的名字即可
-   - Database 为 SQLite 数据库的路径，例如：/data/apps/cloudbeaver/volumes/sqlite3 testDB.db
+   - Database 为 SQLite 数据库文件的路径，路径前缀必须是：**/opt/cloudbeaver/workspace/**，再接上文件名称
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
 

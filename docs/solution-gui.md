@@ -38,7 +38,7 @@ Let's start to connect SQLite if we complete preparation:
 
    - **Driver** is SQLite by default
    - **Connection Name** can by any name if you want
-   - **Database** must use the path as: */data/apps/cloudbeaver/volumes*
+   - **Database** must use the path as: */opt/cloudbeaver/workspace/* and with filename
 
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
 
