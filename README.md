@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**SQLite Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Apache SQLite](https://sqlite.org) based on Ansible and shell. It helps user install SQLite and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**SQLite Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [SQLite](https://sqlite.org/) based on Ansible and shell. It helps user install SQLite and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirement
 
@@ -17,13 +17,11 @@ System Requirement to install this repository are as following：
 | Operating System   | CentOS7.x, Ubuntu18.04, Amazon Linux2 | Optional                 |
 | Public Cloud     | AWS, Azure, Alibaba Cloud, HUAWEI ClOUD, Tencent Cloud    | Optional                 |
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
-| Server Configuration | vCPU no less than 1 core, Memory no less than  2 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
-
-To learn more information, please view [Installation & Configuration](https://github.com/sqlite/sqlite).
+| Server Configuration | vCPU no less than 1 core, Memory no less than  1 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
 
 ## Ecosystem
 
-Core components of this repository: SQLite3.35/3.30/3.9, Docker, cloudbeaver on Docker
+Core components of this repository: SQLite, Docker, CloudBeaver on docker
 
 Learn more about [Parameters](/docs/stack-components.md).
 
@@ -70,8 +68,4 @@ Yes.
 
 #### How to install and view the latest release?
 
-Get the SQLite version from [SQLite repository](https://github.com/apache/incubator-sqlite/releases), and modify the Ansible variable **[sqlite_version](/roles/sqlite/defaults/main.yml)** to change the SQLite version for this repository. 
-
-#### Is the default password safe?
-
-The solution used the random password solution, every deployment produce unique password which is different from other users
+You can only install the exist version from this repository. 

@@ -16,17 +16,29 @@
 | 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
 | 服务器配置 | 最低1核1G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
 
-更多请见 [官方 System requirement](https://github.com/sqlite/sqlite)
+更多请见 [Github 安装编译详情](https://github.com/sqlite/sqlite)
 
 ## 组件
 
-包含的核心组件为：可选 SQLite3.35/3.30/3.9 多个版本，Docker， cloudbeaver on Docker等 
+包含的核心组件为：目前可选 SQLite3.35/3.30/3.9 多个版本，Docker， cloudbeaver on Docker等 
 
 更多请见 [参数表](/docs/zh/stack-components.md)
 
 ## 本项目安装的是 SQLite 最新版吗？
 
-本项目通过[SQLite 官方源](https://www.sqlite.org/download.html)下载编译安装，版本号，可以在下载页面查看  
+本项目通过[SQLite 官方源码](https://www.sqlite.org/download.html)下载编译安装，版本号可以在下载页面查看。
+
+查看 [sqlite.yml](/sqlite.yml) 文件中版本选择的内容，来查看和维护具体的详细版本号。
+
+```
+    - name: 'sqlite_selection'
+      prompt: "Choose the Sqlite distribution \n
+      1: sqlite 3.9\n
+      2: sqlite 3.30\n
+      3: sqlite 3.35\n"
+      private: no
+      default: 3
+```
 
 我们会定期检查版本准确性，并测试此项目，以保证用户可以顺利安装所需的SQLite版本。  
 
