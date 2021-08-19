@@ -14,14 +14,16 @@ System Requirement to install this repository are as following：
 
 | Conditions       | Details                               | Notes                |
 | ------------------- | --------------------------------| -------------------- |
-| Operating System   | CentOS7.x, Ubuntu18.04, Amazon Linux2 | Optional                 |
+| Operating System   | CentOS7.x, Ubuntu20.04, Amazon Linux2 | Optional                 |
 | Public Cloud     | AWS, Azure, Alibaba Cloud, HUAWEI ClOUD, Tencent Cloud    | Optional                 |
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
-| Server Configuration | vCPU no less than 1 core, Memory no less than  1 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
+| Server Configuration | vCPU no less than 1 core, Memory no less than 1 GIB, Storage no less than 20 GB, Swap no less than 2GB |Bandwidth no less than 100M|
+
+To learn more information, please view [Installation & Configuration](https://github.com/sqlite/sqlite).
 
 ## Ecosystem
 
-Core components of this repository: SQLite, Docker, CloudBeaver on docker
+Core components of this repository: SQLite, CloudBeaver on Docker, Docker
 
 Learn more about [Parameters](/docs/stack-components.md).
 
@@ -48,10 +50,6 @@ Follow our [SQLite image](https://apps.websoft9.com/sqlite) for installation on 
 
 **[Administrator Guide](https://support.websoft9.com/docs/sqlite)** 
 
-## Changelog
-
-Detailed changes are documented in the [CHANGELOG](/CHANGELOG.md).
-
 ## License
 
 [LGPL-3.0](/License.md), Additional Terms: It is not allowed to publish free or paid image based on this repository in any Cloud platform's Marketplace.
@@ -62,10 +60,16 @@ This program provided by Websoft9 contains a series of software with separate co
 
 ## FAQ
 
+#### How to install and view the latest release?
+
+This repository install way is Compile isntallation for source, you can  view the version from [Official URL](https://www.sqlite.org/download.html).  
+We will check [Release version](https://github.com/Websoft9/ansible-sqlite/releases) regularly. Update and test this project to ensure that users can successfully install the required version of SQLite.
+
 #### Can I run this repository on Ansible Tower? 
 
 Yes.
 
-#### How to install and view the latest release?
+#### Although the results of the deploy by image are consistent with the results of deploy by script, what is the difference between the two deployment methods?
 
-You can only install the exist version from this repository. 
+Suggest you read the document [Deploy by Image vs Deploy by Script](https://support.websoft9.com/docs/faq/bz-product.html#deployment-comparison).
+
